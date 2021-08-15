@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"),
+	"_variables.scss";
+
+@mixin social-buttons($color) {
+	background-color: $color;
+	color: $testimonial-top;
+	border: 5px solid $color;
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	width: 250px;
+	transition: margin-right 2s;
+}
+
+body {
+	background-color: $background-color;
+	overflow-x: hidden;
+}
+
+* {
+	cursor: url(https://cur.cursors-4u.net/anime/ani-12/ani1115.cur), auto !important;
+}
+
+// TESTIMONIAL
+#flex {
+	// ik schaal mee maar ik wordt nooit breed dan deze witdth
+	max-width: 350px;
+	margin: auto;
+}
+
+#testimonial-top {
+	background-color: $testimonial-top;
+	border: 2px solid $testimonial-top;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 50px;
+	p {
+		font-family: "Open Sans", sans-serif;
+		font-weight: 80%;
+		line-height: 1.6;
+		text-align: left;
+	}
+}
+
+#testimonial-bottom {
+	background-color: $testimonial-footer;
+	border: 2px solid $testimonial-footer;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	text-align: center;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 80%;
+	line-height: 1.6;
+	color: $testimonial-top;
+	p {
+		color: $background-color;
+	}
+	figure {
+		margin: 0;
+		img {
+			width: 100px;
+			height: 100px;
+			border: 5px solid $testimonial-top;
+			border-radius: 50%;
+			background-color: $testimonial-top;
+			margin-top: -75px;
+
+			&:hover {
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-name: anime-animation;
+				animation-timing-function: ease;
+			}
+		}
+	}
+}
+
+@keyframes anime-animation {
+	0% {
+		transform: scale(1, 1) translateY(0) rotateY(0deg);
+	}
+
+	10% {
+		transform: scale(1.1, 0.9) translateY(0) rotateY(50deg);
+	}
+	30% {
+		transform: scale(0.9, 1.1) translateY(-100px) rotateY(150deg);
+	}
+	50% {
+		transform: scale(1, 1) translateY(0) rotateY(50deg);
+	}
+	100% {
+		transform: scale(1, 1) translateY(0) rotateY(0deg);
+	}
+}
+
+// PORTFOLIO GRID
+
+#grid {
+	display: grid;
+	justify-content: center;
+
+	figure {
+		position: relative;
+		padding: 0;
+		margin: 0;
+		img {
+			display: block;
+			width: 350px;
+			height: 350px;
+			background-color: white;
+			border-radius: 5px;
+		}
+		.overlay {
+			position: absolute;
+			inset: 0;
+			height: 350px;
+			width: 350px;
+			opacity: 0;
+			border-radius: 5px;
+			transition: 0.5s ease;
+			background-color: $testimonial-footer;
+
+			.center {
+				margin: 0;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-ms-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+			}
+		}
+		&:hover {
+			.overlay {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+// social media buttons
+ul {
+	list-style-type: none;
+}
+
+.social-media {
+	font-family: "Font Awesome 5 Brands";
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: flex-end;
+	margin-right: -250px;
+
+	.blog {
+		@include social-buttons($blog);
+		&::before {
+			content: "\f37c";
+			text-decoration: none;
+			margin-right: 50px;
+		}
+
+		&:hover {
+			margin-right: 200px;
+			text-decoration: underline;
+		}
+	}
+	.facebook {
+		@include social-buttons($facebook);
+		&::before {
+			content: "\f39e";
+			text-decoration: none;
+			margin-right: 50px;
+		}
+
+		&:hover {
+			margin-right: 200px;
+			text-decoration: underline;
+		}
+	}
+	.twitter {
+		@include social-buttons($twitter);
+		&::before {
+			content: "\f099";
+			margin-right: 50px;
+		}
+		&:hover {
+			margin-right: 200px;
+		}
+	}
+	.github {
+		@include social-buttons($github);
+		&::before {
+			content: "\f09b";
+			margin-right: 50px;
+		}
+		&:hover {
+			margin-right: 200px;
+		}
+	}
+	.linkedin {
+		@include social-buttons($linkedin);
+		&::before {
+			content: "\f0e1";
+			margin-right: 50px;
+		}
+		&:hover {
+			margin-right: 200px;
+		}
+	}
+}
+
+// 2 img
+@media only screen and (min-width: 700px) {
+	#grid {
+		grid-template-columns: repeat(2, 350px);
+	}
+}
+
+@media only screen and (min-width: 1050px) {
+	#grid {
+		grid-template-columns: repeat(3, 350px);
+	}
+}

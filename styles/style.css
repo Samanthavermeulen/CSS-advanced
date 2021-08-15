@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+body {
+  background-color: #c3cfe2;
+  overflow-x: hidden;
+}
+
+* {
+  cursor: url(https://cur.cursors-4u.net/anime/ani-12/ani1115.cur), auto !important;
+}
+
+#flex {
+  max-width: 350px;
+  margin: auto;
+}
+
+#testimonial-top {
+  background-color: white;
+  border: 2px solid white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+}
+
+#testimonial-top p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 80%;
+  line-height: 1.6;
+  text-align: left;
+}
+
+#testimonial-bottom {
+  background-color: #686de0;
+  border: 2px solid #686de0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 80%;
+  line-height: 1.6;
+  color: white;
+}
+
+#testimonial-bottom p {
+  color: #c3cfe2;
+}
+
+#testimonial-bottom figure {
+  margin: 0;
+}
+
+#testimonial-bottom figure img {
+  width: 100px;
+  height: 100px;
+  border: 5px solid white;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: -75px;
+}
+
+#testimonial-bottom figure img:hover {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: anime-animation;
+          animation-name: anime-animation;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+@-webkit-keyframes anime-animation {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0) rotateY(0deg);
+            transform: scale(1, 1) translateY(0) rotateY(0deg);
+  }
+  10% {
+    -webkit-transform: scale(1.1, 0.9) translateY(0) rotateY(50deg);
+            transform: scale(1.1, 0.9) translateY(0) rotateY(50deg);
+  }
+  30% {
+    -webkit-transform: scale(0.9, 1.1) translateY(-100px) rotateY(150deg);
+            transform: scale(0.9, 1.1) translateY(-100px) rotateY(150deg);
+  }
+  50% {
+    -webkit-transform: scale(1, 1) translateY(0) rotateY(50deg);
+            transform: scale(1, 1) translateY(0) rotateY(50deg);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0) rotateY(0deg);
+            transform: scale(1, 1) translateY(0) rotateY(0deg);
+  }
+}
+
+@keyframes anime-animation {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0) rotateY(0deg);
+            transform: scale(1, 1) translateY(0) rotateY(0deg);
+  }
+  10% {
+    -webkit-transform: scale(1.1, 0.9) translateY(0) rotateY(50deg);
+            transform: scale(1.1, 0.9) translateY(0) rotateY(50deg);
+  }
+  30% {
+    -webkit-transform: scale(0.9, 1.1) translateY(-100px) rotateY(150deg);
+            transform: scale(0.9, 1.1) translateY(-100px) rotateY(150deg);
+  }
+  50% {
+    -webkit-transform: scale(1, 1) translateY(0) rotateY(50deg);
+            transform: scale(1, 1) translateY(0) rotateY(50deg);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0) rotateY(0deg);
+            transform: scale(1, 1) translateY(0) rotateY(0deg);
+  }
+}
+
+#grid {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#grid figure {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+#grid figure img {
+  display: block;
+  width: 350px;
+  height: 350px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+#grid figure .overlay {
+  position: absolute;
+  inset: 0;
+  height: 350px;
+  width: 350px;
+  opacity: 0;
+  border-radius: 5px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: #686de0;
+}
+
+#grid figure .overlay .center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#grid figure:hover .overlay {
+  opacity: 1;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.social-media {
+  font-family: "Font Awesome 5 Brands";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  margin-right: -250px;
+}
+
+.social-media .blog {
+  background-color: #e17b77;
+  color: white;
+  border: 5px solid #e17b77;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  width: 250px;
+  -webkit-transition: margin-right 2s;
+  transition: margin-right 2s;
+}
+
+.social-media .blog::before {
+  content: "\f37c";
+  text-decoration: none;
+  margin-right: 50px;
+}
+
+.social-media .blog:hover {
+  margin-right: 200px;
+  text-decoration: underline;
+}
+
+.social-media .facebook {
+  background-color: #3b5998;
+  color: white;
+  border: 5px solid #3b5998;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  width: 250px;
+  -webkit-transition: margin-right 2s;
+  transition: margin-right 2s;
+}
+
+.social-media .facebook::before {
+  content: "\f39e";
+  text-decoration: none;
+  margin-right: 50px;
+}
+
+.social-media .facebook:hover {
+  margin-right: 200px;
+  text-decoration: underline;
+}
+
+.social-media .twitter {
+  background-color: #00aced;
+  color: white;
+  border: 5px solid #00aced;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  width: 250px;
+  -webkit-transition: margin-right 2s;
+  transition: margin-right 2s;
+}
+
+.social-media .twitter::before {
+  content: "\f099";
+  margin-right: 50px;
+}
+
+.social-media .twitter:hover {
+  margin-right: 200px;
+}
+
+.social-media .github {
+  background-color: #333;
+  color: white;
+  border: 5px solid #333;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  width: 250px;
+  -webkit-transition: margin-right 2s;
+  transition: margin-right 2s;
+}
+
+.social-media .github::before {
+  content: "\f09b";
+  margin-right: 50px;
+}
+
+.social-media .github:hover {
+  margin-right: 200px;
+}
+
+.social-media .linkedin {
+  background-color: #007bb6;
+  color: white;
+  border: 5px solid #007bb6;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  width: 250px;
+  -webkit-transition: margin-right 2s;
+  transition: margin-right 2s;
+}
+
+.social-media .linkedin::before {
+  content: "\f0e1";
+  margin-right: 50px;
+}
+
+.social-media .linkedin:hover {
+  margin-right: 200px;
+}
+
+@media only screen and (min-width: 700px) {
+  #grid {
+    -ms-grid-columns: (350px)[2];
+        grid-template-columns: repeat(2, 350px);
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  #grid {
+    -ms-grid-columns: (350px)[3];
+        grid-template-columns: repeat(3, 350px);
+  }
+}
+/*# sourceMappingURL=style.css.map */
